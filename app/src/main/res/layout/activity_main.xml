@@ -1,0 +1,316 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ExpandableListView
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:id="@+id/TeamSelector"
+                android:layout_weight="1" />
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:id="@+id/scrollView"
+                android:layout_weight="3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:id="@+id/imageView"
+                android:layout_weight="5"
+                android:clickable="true" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:text="Edit Player"
+                android:id="@+id/EditButton"
+                android:layout_weight="1"
+                android:clickable="true" />
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TableRow
+                android:layout_width="10dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:text="Name: "
+                    android:id="@+id/NameLabel"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/NameField"
+                    android:layout_column="1"
+                    android:layout_weight="2"
+                    android:textSize="19dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="10dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:text="Team:"
+                    android:id="@+id/TeamLabel"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/TeamField"
+                    android:layout_column="1"
+                    android:layout_weight="2"
+                    android:textSize="19dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:text="Number: "
+                    android:id="@+id/NumberLabel"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/NumberField"
+                    android:layout_column="1"
+                    android:layout_weight="2"
+                    android:textSize="19dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="10dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:text="Position:"
+                    android:id="@+id/PositionLabel"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/PositionField"
+                    android:layout_column="1"
+                    android:layout_weight="2"
+                    android:textSize="19dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="10dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:text="Skill:"
+                    android:id="@+id/SkillLabel"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/SkillField"
+                    android:layout_column="1"
+                    android:layout_weight="2"
+                    android:textSize="19dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="10dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:text="Goals: "
+                    android:id="@+id/GoalLabel"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/GoalField"
+                    android:layout_column="1"
+                    android:layout_weight="2"
+                    android:textSize="19dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="10dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:text="Assists:"
+                    android:id="@+id/AssistLabel"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/AssistField"
+                    android:layout_column="1"
+                    android:layout_weight="2"
+                    android:textSize="19dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="10dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:text="Yellow Cards: "
+                    android:id="@+id/YellowLabel"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/YellowField"
+                    android:layout_column="1"
+                    android:layout_weight="2"
+                    android:textSize="19dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="10dp"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:text="Red Cards: "
+                    android:id="@+id/RedLabel"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/RedField"
+                    android:layout_column="1"
+                    android:layout_weight="2"
+                    android:textSize="19dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="10dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:text="Saves:"
+                    android:id="@+id/SaveLabel"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/SaveField"
+                    android:layout_column="1"
+                    android:layout_weight="2"
+                    android:textSize="19dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="10dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:text="Tackles:"
+                    android:id="@+id/TackleLabel"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/TackleField"
+                    android:layout_column="1"
+                    android:layout_weight="2"
+                    android:textSize="19dp" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</RelativeLayout>
