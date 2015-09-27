@@ -3,7 +3,8 @@
     android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#007e16">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -16,17 +17,30 @@
             android:layout_height="fill_parent"
             android:layout_weight="1">
 
-            <ExpandableListView
+            <Spinner
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
-                android:id="@+id/TeamSelector"
-                android:layout_weight="1" />
+                android:id="@+id/teamSelector"
+                android:layout_weight="2"
+                android:spinnerMode="dropdown"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:text="Players:"
+                android:id="@+id/teamPlayerLabel"
+                android:layout_weight="1"
+                android:textSize="40dp"
+                android:background="#80f5ff" />
 
             <ScrollView
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
-                android:id="@+id/scrollView"
-                android:layout_weight="3" />
+                android:id="@+id/playerSelect"
+                android:layout_weight="5"
+                android:background="#80f5ff"
+                android:fillViewport="false" />
 
         </LinearLayout>
 
@@ -34,28 +48,178 @@
             android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:layout_margin="5dp">
 
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
-                android:id="@+id/imageView"
-                android:layout_weight="5"
-                android:clickable="true" />
+                android:id="@+id/teamLogo"
+                android:layout_weight="4" />
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:background="#b0b0b0">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Team Stats"
+                    android:id="@+id/teamStatLabel"
+                    android:layout_weight="2"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="60dp" />
+
+                <TableRow
+                    android:layout_width="10dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:text="Name: "
+                        android:id="@+id/teamNameLabel"
+                        android:layout_column="0"
+                        android:layout_weight="1"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/teamNameField"
+                        android:layout_column="1"
+                        android:layout_weight="2"
+                        android:textSize="19dp"
+                        android:textColor="#120dff" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="10dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:text="Number of Players:"
+                        android:id="@+id/numPlayerLabel"
+                        android:layout_column="0"
+                        android:layout_weight="1"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/numPlayersField"
+                        android:layout_column="1"
+                        android:layout_weight="2"
+                        android:textSize="19dp"
+                        android:textColor="#120dff" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:text="Wins:"
+                        android:id="@+id/winLabel"
+                        android:layout_column="0"
+                        android:layout_weight="1"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/numWinsField"
+                        android:layout_column="1"
+                        android:layout_weight="2"
+                        android:textSize="19dp"
+                        android:textColor="#120dff" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="10dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:text="Losses:"
+                        android:id="@+id/lossLabel"
+                        android:layout_column="0"
+                        android:layout_weight="1"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/numLossesField"
+                        android:layout_column="1"
+                        android:layout_weight="2"
+                        android:textSize="19dp"
+                        android:textColor="#120dff" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="10dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:text="Draws:"
+                        android:id="@+id/drawLabel"
+                        android:layout_column="0"
+                        android:layout_weight="1"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/numDrawsLabel"
+                        android:layout_column="1"
+                        android:layout_weight="2"
+                        android:textSize="19dp"
+                        android:textColor="#120dff" />
+                </TableRow>
+
+            </TableLayout>
 
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
-                android:text="Edit Player"
-                android:id="@+id/EditButton"
-                android:layout_weight="1"
-                android:clickable="true" />
+                android:text="EDIT/ADD TEAM"
+                android:id="@+id/editTeamButton"
+                android:layout_weight="1" />
+
         </LinearLayout>
 
         <TableLayout
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="#b0b0b0"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Player Stats"
+                android:id="@+id/playerStatLabel"
+                android:layout_weight="2"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="60dp" />
 
             <TableRow
                 android:layout_width="10dp"
@@ -77,7 +241,8 @@
                     android:id="@+id/NameField"
                     android:layout_column="1"
                     android:layout_weight="2"
-                    android:textSize="19dp" />
+                    android:textSize="19dp"
+                    android:textColor="#120dff" />
             </TableRow>
 
             <TableRow
@@ -100,7 +265,8 @@
                     android:id="@+id/TeamField"
                     android:layout_column="1"
                     android:layout_weight="2"
-                    android:textSize="19dp" />
+                    android:textSize="19dp"
+                    android:textColor="#120dff" />
             </TableRow>
 
             <TableRow
@@ -123,7 +289,8 @@
                     android:id="@+id/NumberField"
                     android:layout_column="1"
                     android:layout_weight="2"
-                    android:textSize="19dp" />
+                    android:textSize="19dp"
+                    android:textColor="#120dff" />
             </TableRow>
 
             <TableRow
@@ -146,7 +313,8 @@
                     android:id="@+id/PositionField"
                     android:layout_column="1"
                     android:layout_weight="2"
-                    android:textSize="19dp" />
+                    android:textSize="19dp"
+                    android:textColor="#120dff" />
             </TableRow>
 
             <TableRow
@@ -169,7 +337,8 @@
                     android:id="@+id/SkillField"
                     android:layout_column="1"
                     android:layout_weight="2"
-                    android:textSize="19dp" />
+                    android:textSize="19dp"
+                    android:textColor="#120dff" />
             </TableRow>
 
             <TableRow
@@ -192,7 +361,8 @@
                     android:id="@+id/GoalField"
                     android:layout_column="1"
                     android:layout_weight="2"
-                    android:textSize="19dp" />
+                    android:textSize="19dp"
+                    android:textColor="#120dff" />
             </TableRow>
 
             <TableRow
@@ -215,7 +385,8 @@
                     android:id="@+id/AssistField"
                     android:layout_column="1"
                     android:layout_weight="2"
-                    android:textSize="19dp" />
+                    android:textSize="19dp"
+                    android:textColor="#120dff" />
             </TableRow>
 
             <TableRow
@@ -238,7 +409,8 @@
                     android:id="@+id/YellowField"
                     android:layout_column="1"
                     android:layout_weight="2"
-                    android:textSize="19dp" />
+                    android:textSize="19dp"
+                    android:textColor="#120dff" />
             </TableRow>
 
             <TableRow
@@ -261,7 +433,8 @@
                     android:id="@+id/RedField"
                     android:layout_column="1"
                     android:layout_weight="2"
-                    android:textSize="19dp" />
+                    android:textSize="19dp"
+                    android:textColor="#120dff" />
 
             </TableRow>
 
@@ -285,7 +458,8 @@
                     android:id="@+id/SaveField"
                     android:layout_column="1"
                     android:layout_weight="2"
-                    android:textSize="19dp" />
+                    android:textSize="19dp"
+                    android:textColor="#120dff" />
             </TableRow>
 
             <TableRow
@@ -308,9 +482,36 @@
                     android:id="@+id/TackleField"
                     android:layout_column="1"
                     android:layout_weight="2"
-                    android:textSize="19dp" />
+                    android:textSize="19dp"
+                    android:textColor="#120dff" />
             </TableRow>
+
         </TableLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:id="@+id/playerPic"
+                android:layout_weight="2"
+                android:clickable="true" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:text="PLAY GAME!"
+                android:id="@+id/playButton"
+                android:layout_weight="1"
+                android:layout_margin="20dp"
+                android:background="#ff0000"
+                android:textSize="30dp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 </RelativeLayout>
