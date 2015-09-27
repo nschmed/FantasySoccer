@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ScrollView;
@@ -75,6 +76,15 @@ public class MainActivity extends AppCompatActivity {
         teamLogo = (ImageView)findViewById(R.id.teamLogo);
         playerPic = (ImageView)findViewById(R.id.playerPic);
 
+        //create click listeners for buttons
+        editTeamButton.setOnClickListener(new editTeamButtonListener());
+        playGameButton.setOnClickListener(new playGameButtonListener());
+
     }
 
+    private class editTeamButtonListener implements View.OnClickListener {
+    }
+
+    private class playGameButtonListener implements View.OnClickListener {
+    }
 }

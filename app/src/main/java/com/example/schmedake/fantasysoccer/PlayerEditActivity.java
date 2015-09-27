@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ScrollView;
@@ -75,10 +76,32 @@ public class PlayerEditActivity extends MainActivity{
         addTeamButton = (Button)findViewById(R.id.addTeamButton);
         editPlayerButton = (Button)findViewById(R.id.editPlayerButton);
         addPlayerButton = (Button)findViewById(R.id.addPlayerButton);
+        homeButton = (Button)findViewById(R.id.homeButton);
         teamSelector2 = (Spinner)findViewById(R.id.teamSelector2);
         playerSelector2 = (ScrollView)findViewById(R.id.scrollPlayers);
         teamLogo2 = (ImageView)findViewById(R.id.teamLogo2);
         playerPic2 = (ImageView)findViewById(R.id.playerPic2);
+
+        //create listeners for buttons
+        editTeamButton2.setOnClickListener(new editTeamButton2Listener());
+        addTeamButton.setOnClickListener(new addTeamButtonListener());
+        addPlayerButton.setOnClickListener(new addPlayerButtonListener());
+        editPlayerButton.setOnClickListener(new editPlayerButtonListener());
+        homeButton.setOnClickListener(new homeButtonListener());
     }
 
+    private class editTeamButton2Listener implements View.OnClickListener {
+    }
+
+    private class addTeamButtonListener implements View.OnClickListener {
+    }
+
+    private class addPlayerButtonListener implements View.OnClickListener {
+    }
+
+    private class editPlayerButtonListener implements View.OnClickListener {
+    }
+
+    private class homeButtonListener implements View.OnClickListener {
+    }
 }

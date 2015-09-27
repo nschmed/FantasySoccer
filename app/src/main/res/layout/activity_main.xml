@@ -40,7 +40,9 @@
                 android:id="@+id/playerSelect"
                 android:layout_weight="5"
                 android:background="#80f5ff"
-                android:fillViewport="false" />
+                android:fillViewport="false" >
+
+            </ScrollView>
 
         </LinearLayout>
 
