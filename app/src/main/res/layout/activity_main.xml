@@ -202,7 +202,8 @@
                 android:layout_height="0dp"
                 android:text="EDIT/ADD TEAM"
                 android:id="@+id/editTeamButton"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:onClick="goToEdit"/>
 
         </LinearLayout>
 
@@ -511,7 +512,8 @@
                 android:layout_weight="1"
                 android:layout_margin="20dp"
                 android:background="#ff0000"
-                android:textSize="30dp" />
+                android:textSize="30dp"
+                android:onClick="goToPlay"/>
 
         </LinearLayout>
 

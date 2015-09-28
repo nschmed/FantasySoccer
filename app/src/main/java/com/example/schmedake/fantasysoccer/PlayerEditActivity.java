@@ -1,5 +1,6 @@
 package com.example.schmedake.fantasysoccer;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -87,21 +88,45 @@ public class PlayerEditActivity extends MainActivity{
         addTeamButton.setOnClickListener(new addTeamButtonListener());
         addPlayerButton.setOnClickListener(new addPlayerButtonListener());
         editPlayerButton.setOnClickListener(new editPlayerButtonListener());
-        homeButton.setOnClickListener(new homeButtonListener());
+    }
+
+    public void goHome(View view)
+    {
+        this.finish();
     }
 
     private class editTeamButton2Listener implements View.OnClickListener {
+        public void onClick(View view)
+        {
+
+        }
     }
 
     private class addTeamButtonListener implements View.OnClickListener {
+        public void onClick(View view)
+        {
+
+        }
     }
 
     private class addPlayerButtonListener implements View.OnClickListener {
+        public void onClick(View view)
+        {
+
+        }
     }
 
     private class editPlayerButtonListener implements View.OnClickListener {
+        public void onClick(View view)
+        {
+
+        }
     }
 
-    private class homeButtonListener implements View.OnClickListener {
-    }
+    //private class homeButtonListener implements View.OnClickListener {
+    //    public void onClick(View view)
+    //    {
+    //
+    //    }
+    //}
 }

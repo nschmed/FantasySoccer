@@ -58,7 +58,8 @@
                 android:text="GO HOME"
                 android:id="@+id/homeButton"
                 android:background="#cd42ff"
-                android:layout_margin="5dp" />
+                android:layout_margin="5dp"
+                android:onClick="goHome"/>
         </LinearLayout>
 
         <LinearLayout
@@ -210,7 +211,8 @@
                 android:text="EDIT TEAM"
                 android:id="@+id/editTeamButton2"
                 android:layout_weight="1"
-                android:textColor="#010101" />
+                android:textColor="#010101"
+                android:checked="false" />
 
             <Button
                 android:layout_width="fill_parent"
