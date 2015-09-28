@@ -52,6 +52,21 @@ public class MainActivity extends AppCompatActivity {
     // Create scrollbar variable
     protected ScrollView playerSelector;
 
+    // Create buttons inside scrollBar
+    Button geckoButton;
+    Button snakeButton;
+    Button catButton;
+    Button dogButton;
+    Button horseButton;
+    Button elephantButton;
+    Button phoneButton;
+    Button projectorButton;
+    Button computerButton;
+    Button printerButton;
+    Button tabletButton;
+    Button videoGameButton;
+
+
     // Create imageView variables
     protected ImageView teamLogo;
     protected ImageView playerPic;
@@ -90,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         playerPic = (ImageView)findViewById(R.id.playerPic);
 
         // Create teams and place them in ArrayList and HashTable
-        Hashtable<String,SoccerTeam> teamTable= new Hashtable();
+        Hashtable<String,SoccerTeam> teamTable= new Hashtable<String,SoccerTeam>();
         allTeamString = "SELECT TEAM: All Teams";
         teamList = new ArrayList<String>();
         teamList.add(allTeamString);
@@ -280,7 +295,7 @@ public class MainActivity extends AppCompatActivity {
         Electronics.losses = 9;
         Electronics.playerList.put(Phone.playerName, Phone);
         Electronics.playerList.put(Projector.playerName, Projector);
-        Electronics.playerList.put(Printer.playerName, Projector);
+        Electronics.playerList.put(Printer.playerName, Printer);
         Electronics.playerList.put(Computer.playerName, Computer);
         Electronics.playerList.put(Tablet.playerName, Tablet);
         Electronics.playerList.put(VideoGame.playerName, VideoGame);
@@ -298,30 +313,49 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout linearLayout = new LinearLayout(this);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
-    // Add Buttons for each player
-        Button geckoButton = new Button(this);
-        geckoButton.setText("Gecko");
-        linearLayout.addView(geckoButton);
-        Button snakeButton = new Button(this);
-        snakeButton.setText("Snake");
-        linearLayout.addView(snakeButton);
-        Button catButton = new Button(this);
-        catButton.setText("Cat");
-        linearLayout.addView(catButton);
-        Button dogButton = new Button(this);
-        dogButton.setText("Dog");
-        linearLayout.addView(dogButton);
-        Button horseButton = new Button(this);
-        horseButton.setText("Horse");
-        linearLayout.addView(horseButton);
-        Button elephantButton = new Button(this);
-        elephantButton.setText("Elephant");
-        linearLayout.addView(elephantButton);
+        // Add Buttons for each player, enable them, and change background color to light green
+        geckoButton = (Button)findViewById(R.id.scrollButton1);
+        geckoButton.setText(Gecko.playerName);
+        geckoButton.setBackgroundColor(0xFF00FF00);
+        snakeButton = (Button)findViewById(R.id.scrollButton2);
+        snakeButton.setText(Snake.playerName);
+        snakeButton.setBackgroundColor(0xFF00FF00);
+        catButton = (Button)findViewById(R.id.scrollButton3);
+        catButton.setText(Cat.playerName);
+        catButton.setBackgroundColor(0xFF00FF00);
+        dogButton = (Button)findViewById(R.id.scrollButton4);
+        dogButton.setText(Dog.playerName);
+        dogButton.setBackgroundColor(0xFF00FF00);
+        horseButton = (Button)findViewById(R.id.scrollButton5);
+        horseButton.setText(Horse.playerName);
+        horseButton.setBackgroundColor(0xFF00FF00);
+        elephantButton =(Button)findViewById(R.id.scrollButton6);
+        elephantButton.setText(Elephant.playerName);
+        elephantButton.setBackgroundColor(0xFF00FF00);
+        phoneButton = (Button)findViewById(R.id.scrollButton7);
+        phoneButton.setText(Phone.playerName);
+        phoneButton.setBackgroundColor(0xFF00FF00);
+        printerButton = (Button)findViewById(R.id.scrollButton8);
+        printerButton.setText(Printer.playerName);
+        printerButton.setBackgroundColor(0xFF00FF00);
+        projectorButton = (Button)findViewById(R.id.scrollButton9);
+        projectorButton.setText(Projector.playerName);
+        projectorButton.setBackgroundColor(0xFF00FF00);
+        computerButton = (Button)findViewById(R.id.scrollButton10);
+        computerButton.setText(Computer.playerName);
+        computerButton.setBackgroundColor(0xFF00FF00);
+        tabletButton = (Button)findViewById(R.id.scrollButton11);
+        tabletButton.setText(Tablet.playerName);
+        tabletButton.setBackgroundColor(0xFF00FF00);
+        videoGameButton = (Button)findViewById(R.id.scrollButton12);
+        videoGameButton.setText(VideoGame.playerName);
+        videoGameButton.setBackgroundColor(0xFF00FF00);
 
+        //enable all used buttons
 
-    // Add the LinearLayout element to the ScrollView
-        playerSelector.addView(linearLayout);
     }
+
+    
 
     public void goToEdit(View view)
     {
