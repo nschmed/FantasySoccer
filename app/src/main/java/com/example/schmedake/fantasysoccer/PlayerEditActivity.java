@@ -39,8 +39,10 @@ public class PlayerEditActivity extends MainActivity{
     // Create button variables
     protected Button editTeamButton2;
     protected Button addTeamButton;
+    protected Button saveTeamButton;
     protected Button editPlayerButton;
     protected Button addPlayerButton;
+    protected Button savePlayerButton;
     protected Button homeButton;
 
     // Create spinner variables
@@ -79,6 +81,10 @@ public class PlayerEditActivity extends MainActivity{
     Button newPlayerButton11_2;
     Button newPlayerButton12_2;
 
+    //create current team/player variables for editing and adding
+    SoccerTeam currentTeam;
+    SoccerPlayer currentPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -106,16 +112,12 @@ public class PlayerEditActivity extends MainActivity{
         editPlayerButton = (Button)findViewById(R.id.editPlayerButton);
         addPlayerButton = (Button)findViewById(R.id.addPlayerButton);
         homeButton = (Button)findViewById(R.id.homeButton);
+        saveTeamButton = (Button)findViewById(R.id.saveTeamButton);
+        savePlayerButton = (Button)findViewById(R.id.savePlayerButton);
         teamSelector2 = (Spinner)findViewById(R.id.teamSelector2);
         playerSelector2 = (ScrollView)findViewById(R.id.scrollPlayers);
         teamLogo2 = (ImageView)findViewById(R.id.teamLogo2);
         playerPic2 = (ImageView)findViewById(R.id.playerPic2);
-
-        //create listeners for buttons
-        editTeamButton2.setOnClickListener(new editTeamButton2Listener());
-        addTeamButton.setOnClickListener(new addTeamButtonListener());
-        addPlayerButton.setOnClickListener(new addPlayerButtonListener());
-        editPlayerButton.setOnClickListener(new editPlayerButtonListener());
 
         //create all scrollbar buttons and set them as necessary, starting with hard coded buttons
         geckoButton2 = (Button)findViewById(R.id.button);
@@ -284,37 +286,652 @@ public class PlayerEditActivity extends MainActivity{
 
     }
 
+    //implement go home button method
     public void goHome(View view)
     {
         this.finish();
     }
 
-    private class editTeamButton2Listener implements View.OnClickListener {
-        public void onClick(View view)
-        {
-
-        }
+    //implement all scroll bar button methods (1-24)
+    public void editScroll1(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(geckoButton2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll2(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(snakeButton2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll3(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(catButton2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll4(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(dogButton2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll5(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(horseButton2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll6(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(elephantButton2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll7(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(phoneButton2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll8(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(printerButton2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll9(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(projectorButton2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll10(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(computerButton2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll11(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(tabletButton2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll12(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(videoGameButton2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll13(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(newPlayerButton1_2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll14(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(newPlayerButton2_2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll15(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(newPlayerButton3_2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll16(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(newPlayerButton4_2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }public void editScroll17(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(newPlayerButton5_2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll18(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(newPlayerButton6_2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }public void editScroll19(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(newPlayerButton7_2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll20(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(newPlayerButton8_2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll21(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(newPlayerButton9_2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll22(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(newPlayerButton10_2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll23(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(newPlayerButton11_2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
+    }
+    public void editScroll24(View view)
+    {
+        SoccerPlayer player = playerButtonHash.get(newPlayerButton12_2);
+        playerNameEdit.setText(player.playerName);
+        teamEdit.setText(player.team);
+        numberEdit.setText(player.number+"");
+        positionEdit.setText(player.position);
+        skillEdit.setText(player.skill+"");
+        goalsEdit.setText(player.goals+"");
+        assistsEdit.setText(player.assists+"");
+        yellowEdit.setText(player.yellows+"");
+        redEdit.setText(player.reds+"");
+        savesEdit.setText(player.saves+"");
+        tacklesEdit.setText(player.tackles+"");
     }
 
-    private class addTeamButtonListener implements View.OnClickListener {
-        public void onClick(View view)
-        {
+    //set actions for edit team button click
+    public void editTeamButton2Listener(View view) {
+
+        //enable all relevant team stat editable fields
+        teamNameEdit.setEnabled(true);
+        numPlayersEdit.setEnabled(true);
+        numWinsEdit.setEnabled(true);
+        numLossesEdit.setEnabled(true);
+        numDrawsEdit.setEnabled(true);
+
+        //enable save team button
+        saveTeamButton.setEnabled(true);
+
+        //disable all buttons except save team and go home
+        geckoButton2.setEnabled(false);
+        snakeButton2.setEnabled(false);
+        catButton2.setEnabled(false);
+        dogButton2.setEnabled(false);
+        horseButton2.setEnabled(false);
+        elephantButton2.setEnabled(false);
+        phoneButton2.setEnabled(false);
+        printerButton2.setEnabled(false);
+        projectorButton2.setEnabled(false);
+        computerButton2.setEnabled(false);
+        tabletButton2.setEnabled(false);
+        videoGameButton2.setEnabled(false);
+        newPlayerButton1_2.setEnabled(false);
+        newPlayerButton2_2.setEnabled(false);
+        newPlayerButton3_2.setEnabled(false);
+        newPlayerButton4_2.setEnabled(false);
+        newPlayerButton5_2.setEnabled(false);
+        newPlayerButton6_2.setEnabled(false);
+        newPlayerButton7_2.setEnabled(false);
+        newPlayerButton8_2.setEnabled(false);
+        newPlayerButton9_2.setEnabled(false);
+        newPlayerButton10_2.setEnabled(false);
+        newPlayerButton11_2.setEnabled(false);
+        newPlayerButton12_2.setEnabled(false);
+        addTeamButton.setEnabled(false);
+        editTeamButton2.setEnabled(false);
+        editPlayerButton.setEnabled(false);
+        addPlayerButton.setEnabled(false);
 
         }
+
+    //set actions for add team button click
+    public void AddTeamButtonListener(View view)
+    {
+        //enable all relevant team stat editable fields
+        teamNameEdit.setEnabled(true);
+        numPlayersEdit.setEnabled(true);
+        numWinsEdit.setEnabled(true);
+        numLossesEdit.setEnabled(true);
+        numDrawsEdit.setEnabled(true);
+
+        //enable save team button
+        saveTeamButton.setEnabled(true);
+
+        //disable all buttons except save team and go home
+        geckoButton2.setEnabled(false);
+        snakeButton2.setEnabled(false);
+        catButton2.setEnabled(false);
+        dogButton2.setEnabled(false);
+        horseButton2.setEnabled(false);
+        elephantButton2.setEnabled(false);
+        phoneButton2.setEnabled(false);
+        printerButton2.setEnabled(false);
+        projectorButton2.setEnabled(false);
+        computerButton2.setEnabled(false);
+        tabletButton2.setEnabled(false);
+        videoGameButton2.setEnabled(false);
+        newPlayerButton1_2.setEnabled(false);
+        newPlayerButton2_2.setEnabled(false);
+        newPlayerButton3_2.setEnabled(false);
+        newPlayerButton4_2.setEnabled(false);
+        newPlayerButton5_2.setEnabled(false);
+        newPlayerButton6_2.setEnabled(false);
+        newPlayerButton7_2.setEnabled(false);
+        newPlayerButton8_2.setEnabled(false);
+        newPlayerButton9_2.setEnabled(false);
+        newPlayerButton10_2.setEnabled(false);
+        newPlayerButton11_2.setEnabled(false);
+        newPlayerButton12_2.setEnabled(false);
+        addTeamButton.setEnabled(false);
+        editTeamButton2.setEnabled(false);
+        editPlayerButton.setEnabled(false);
+        addPlayerButton.setEnabled(false);
     }
 
-    private class addPlayerButtonListener implements View.OnClickListener {
-        public void onClick(View view)
-        {
+    public void saveTeamButtonListener(View view)
+    {
+        //disable all team stat editable fields
+        teamNameEdit.setEnabled(false);
+        numPlayersEdit.setEnabled(false);
+        numWinsEdit.setEnabled(false);
+        numLossesEdit.setEnabled(false);
+        numDrawsEdit.setEnabled(false);
 
-        }
+        //disable save team button
+        saveTeamButton.setEnabled(false);
+
+        //enable all buttons
+        geckoButton2.setEnabled(true);
+        snakeButton2.setEnabled(true);
+        catButton2.setEnabled(true);
+        dogButton2.setEnabled(true);
+        horseButton2.setEnabled(true);
+        elephantButton2.setEnabled(true);
+        phoneButton2.setEnabled(true);
+        printerButton2.setEnabled(true);
+        projectorButton2.setEnabled(true);
+        computerButton2.setEnabled(true);
+        tabletButton2.setEnabled(true);
+        videoGameButton2.setEnabled(true);
+        newPlayerButton1_2.setEnabled(true);
+        newPlayerButton2_2.setEnabled(true);
+        newPlayerButton3_2.setEnabled(true);
+        newPlayerButton4_2.setEnabled(true);
+        newPlayerButton5_2.setEnabled(true);
+        newPlayerButton6_2.setEnabled(true);
+        newPlayerButton7_2.setEnabled(true);
+        newPlayerButton8_2.setEnabled(true);
+        newPlayerButton9_2.setEnabled(true);
+        newPlayerButton10_2.setEnabled(true);
+        newPlayerButton11_2.setEnabled(true);
+        newPlayerButton12_2.setEnabled(true);
+        addTeamButton.setEnabled(true);
+        editTeamButton2.setEnabled(true);
+        editPlayerButton.setEnabled(true);
+        addPlayerButton.setEnabled(true);
     }
 
-    private class editPlayerButtonListener implements View.OnClickListener {
-        public void onClick(View view)
-        {
+    //set actions for add player button click
+    public void addPlayerButtonListener(View view)
+    {
+        //enable all relevant player stat editable fields
+        playerNameEdit.setEnabled(true);
+        teamEdit.setEnabled(true);
+        numberEdit.setEnabled(true);
+        positionEdit.setEnabled(true);
+        skillEdit.setEnabled(true);
+        goalsEdit.setEnabled(true);
+        assistsEdit.setEnabled(true);
+        yellowEdit.setEnabled(true);
+        redEdit.setEnabled(true);
+        savesEdit.setEnabled(true);
+        tacklesEdit.setEnabled(true);
 
-        }
+        //enable save team button
+        savePlayerButton.setEnabled(true);
+
+        //disable all buttons except save player and go home
+        geckoButton2.setEnabled(false);
+        snakeButton2.setEnabled(false);
+        catButton2.setEnabled(false);
+        dogButton2.setEnabled(false);
+        horseButton2.setEnabled(false);
+        elephantButton2.setEnabled(false);
+        phoneButton2.setEnabled(false);
+        printerButton2.setEnabled(false);
+        projectorButton2.setEnabled(false);
+        computerButton2.setEnabled(false);
+        tabletButton2.setEnabled(false);
+        videoGameButton2.setEnabled(false);
+        newPlayerButton1_2.setEnabled(false);
+        newPlayerButton2_2.setEnabled(false);
+        newPlayerButton3_2.setEnabled(false);
+        newPlayerButton4_2.setEnabled(false);
+        newPlayerButton5_2.setEnabled(false);
+        newPlayerButton6_2.setEnabled(false);
+        newPlayerButton7_2.setEnabled(false);
+        newPlayerButton8_2.setEnabled(false);
+        newPlayerButton9_2.setEnabled(false);
+        newPlayerButton10_2.setEnabled(false);
+        newPlayerButton11_2.setEnabled(false);
+        newPlayerButton12_2.setEnabled(false);
+        addTeamButton.setEnabled(false);
+        editTeamButton2.setEnabled(false);
+        editPlayerButton.setEnabled(false);
+        addPlayerButton.setEnabled(false);
+    }
+
+    //set actions for edit player button click
+    public void editPlayerButtonListener(View view)
+    {
+        //enable all relevant player stat editable fields
+        playerNameEdit.setEnabled(true);
+        teamEdit.setEnabled(true);
+        numberEdit.setEnabled(true);
+        positionEdit.setEnabled(true);
+        skillEdit.setEnabled(true);
+        goalsEdit.setEnabled(true);
+        assistsEdit.setEnabled(true);
+        yellowEdit.setEnabled(true);
+        redEdit.setEnabled(true);
+        savesEdit.setEnabled(true);
+        tacklesEdit.setEnabled(true);
+
+        //enable save team button
+        savePlayerButton.setEnabled(true);
+
+        //disable all buttons except save player and go home
+        geckoButton2.setEnabled(false);
+        snakeButton2.setEnabled(false);
+        catButton2.setEnabled(false);
+        dogButton2.setEnabled(false);
+        horseButton2.setEnabled(false);
+        elephantButton2.setEnabled(false);
+        phoneButton2.setEnabled(false);
+        printerButton2.setEnabled(false);
+        projectorButton2.setEnabled(false);
+        computerButton2.setEnabled(false);
+        tabletButton2.setEnabled(false);
+        videoGameButton2.setEnabled(false);
+        newPlayerButton1_2.setEnabled(false);
+        newPlayerButton2_2.setEnabled(false);
+        newPlayerButton3_2.setEnabled(false);
+        newPlayerButton4_2.setEnabled(false);
+        newPlayerButton5_2.setEnabled(false);
+        newPlayerButton6_2.setEnabled(false);
+        newPlayerButton7_2.setEnabled(false);
+        newPlayerButton8_2.setEnabled(false);
+        newPlayerButton9_2.setEnabled(false);
+        newPlayerButton10_2.setEnabled(false);
+        newPlayerButton11_2.setEnabled(false);
+        newPlayerButton12_2.setEnabled(false);
+        addTeamButton.setEnabled(false);
+        editTeamButton2.setEnabled(false);
+        editPlayerButton.setEnabled(false);
+        addPlayerButton.setEnabled(false);
+    }
+
+    //set actions for save player button click
+    public void savePlayerButtonListener(View view)
+    {
+        //enable all relevant player stat editable fields
+        playerNameEdit.setEnabled(false);
+        teamEdit.setEnabled(false);
+        numberEdit.setEnabled(false);
+        positionEdit.setEnabled(false);
+        skillEdit.setEnabled(false);
+        goalsEdit.setEnabled(false);
+        assistsEdit.setEnabled(false);
+        yellowEdit.setEnabled(false);
+        redEdit.setEnabled(false);
+        savesEdit.setEnabled(false);
+        tacklesEdit.setEnabled(false);
+
+        //disable save team button
+        savePlayerButton.setEnabled(false);
+
+        //enable all buttons
+        geckoButton2.setEnabled(true);
+        snakeButton2.setEnabled(true);
+        catButton2.setEnabled(true);
+        dogButton2.setEnabled(true);
+        horseButton2.setEnabled(true);
+        elephantButton2.setEnabled(true);
+        phoneButton2.setEnabled(true);
+        printerButton2.setEnabled(true);
+        projectorButton2.setEnabled(true);
+        computerButton2.setEnabled(true);
+        tabletButton2.setEnabled(true);
+        videoGameButton2.setEnabled(true);
+        newPlayerButton1_2.setEnabled(true);
+        newPlayerButton2_2.setEnabled(true);
+        newPlayerButton3_2.setEnabled(true);
+        newPlayerButton4_2.setEnabled(true);
+        newPlayerButton5_2.setEnabled(true);
+        newPlayerButton6_2.setEnabled(true);
+        newPlayerButton7_2.setEnabled(true);
+        newPlayerButton8_2.setEnabled(true);
+        newPlayerButton9_2.setEnabled(true);
+        newPlayerButton10_2.setEnabled(true);
+        newPlayerButton11_2.setEnabled(true);
+        newPlayerButton12_2.setEnabled(true);
+        addTeamButton.setEnabled(true);
+        editTeamButton2.setEnabled(true);
+        editPlayerButton.setEnabled(true);
+        addPlayerButton.setEnabled(true);
     }
 
 }

@@ -63,7 +63,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll1"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -71,7 +72,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button2"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll2"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -79,7 +81,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button3"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll3"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -87,7 +90,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button4"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll4"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -95,7 +99,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button5"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll5"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -103,7 +108,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button6"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll6"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -111,7 +117,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button7"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll7"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -119,7 +126,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button8"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll8"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -127,7 +135,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button9"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll9"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -135,7 +144,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button10"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll10"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -143,7 +153,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button11"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll11"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -151,7 +162,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button12"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll12"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -159,7 +171,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button13"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll13"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -167,7 +180,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button14"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll14"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -175,7 +189,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button15"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll15"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -183,7 +198,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button16"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll16"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -191,7 +207,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button17"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll17"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -199,7 +216,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button18"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll18"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -207,7 +225,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button19"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll19"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -215,7 +234,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button20"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll20"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -223,7 +243,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button21"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll21"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -231,7 +252,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button22"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll22"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -239,7 +261,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button23"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll23"/>
 
                     <Button
                         android:layout_width="fill_parent"
@@ -247,7 +270,8 @@
                         android:text="Please Add New Player"
                         android:id="@+id/button24"
                         android:background="#ffff00"
-                        android:enabled="false" />
+                        android:enabled="false"
+                        android:onClick="editScroll24"/>
                 </LinearLayout>
             </ScrollView>
 
@@ -307,7 +331,8 @@
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"
                         android:id="@+id/editTeamName"
-                        android:layout_weight="2" />
+                        android:layout_weight="2"
+                        android:enabled="false"/>
 
                 </TableRow>
 
@@ -330,7 +355,8 @@
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"
                         android:id="@+id/editNumPlayers"
-                        android:layout_weight="2" />
+                        android:layout_weight="2"
+                        android:enabled="false"/>
 
                 </TableRow>
 
@@ -353,7 +379,8 @@
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"
                         android:id="@+id/editWins"
-                        android:layout_weight="2" />
+                        android:layout_weight="2"
+                        android:enabled="false"/>
 
                 </TableRow>
 
@@ -376,7 +403,8 @@
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"
                         android:id="@+id/editLosses"
-                        android:layout_weight="2" />
+                        android:layout_weight="2"
+                        android:enabled="false"/>
 
                 </TableRow>
 
@@ -399,7 +427,8 @@
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"
                         android:id="@+id/editDraws"
-                        android:layout_weight="2" />
+                        android:layout_weight="2"
+                        android:enabled="false"/>
 
                 </TableRow>
             </TableLayout>
@@ -411,7 +440,8 @@
                 android:id="@+id/editTeamButton2"
                 android:layout_weight="1"
                 android:textColor="#010101"
-                android:checked="false" />
+                android:checked="false"
+                android:onClick="editTeamButton2Listener"/>
 
             <Button
                 android:layout_width="fill_parent"
@@ -419,7 +449,18 @@
                 android:text="ADD TEAM"
                 android:id="@+id/addTeamButton"
                 android:layout_weight="1"
-                android:textColor="#010101" />
+                android:textColor="#010101"
+                android:onClick="addTeamButtonListener"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:text="Save Team"
+                android:id="@+id/saveTeamButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:onClick="saveTeamButtonListener"/>
         </LinearLayout>
 
         <LinearLayout
@@ -451,7 +492,8 @@
                 android:id="@+id/editPlayerButton"
                 android:layout_weight="1"
                 android:clickable="true"
-                android:textColor="#010101" />
+                android:textColor="#010101"
+                android:onClick="editPlayerButtonListener"/>
 
             <Button
                 android:layout_width="fill_parent"
@@ -460,7 +502,18 @@
                 android:id="@+id/addPlayerButton"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
-                android:textColor="#010101" />
+                android:textColor="#010101"
+                android:onClick="editPlayerButtonListener"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:text="Save Player"
+                android:id="@+id/savePlayerButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:onClick="savePlayerButtonListener"/>
         </LinearLayout>
 
         <TableLayout
@@ -500,7 +553,8 @@
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:id="@+id/editPlayerName"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:enabled="false"/>
 
             </TableRow>
 
@@ -523,7 +577,8 @@
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:id="@+id/editTeam"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:enabled="false"/>
 
             </TableRow>
 
@@ -546,7 +601,8 @@
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:id="@+id/editPlayerNum"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:enabled="false"/>
 
             </TableRow>
 
@@ -569,7 +625,8 @@
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:id="@+id/editPosition"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:enabled="false"/>
 
             </TableRow>
 
@@ -592,7 +649,8 @@
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:id="@+id/editSkill"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:enabled="false"/>
 
             </TableRow>
 
@@ -615,7 +673,8 @@
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:id="@+id/editGoals"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:enabled="false"/>
 
             </TableRow>
 
@@ -638,7 +697,8 @@
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:id="@+id/editAssists"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:enabled="false"/>
 
             </TableRow>
 
@@ -661,7 +721,8 @@
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:id="@+id/editYellows"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:enabled="false"/>
 
             </TableRow>
 
@@ -684,7 +745,8 @@
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:id="@+id/editReds"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:enabled="false"/>
 
             </TableRow>
 
@@ -707,7 +769,8 @@
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:id="@+id/editSaves"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:enabled="false"/>
 
             </TableRow>
 
@@ -730,7 +793,8 @@
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:id="@+id/editTackles"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:enabled="false"/>
 
             </TableRow>
         </TableLayout>
